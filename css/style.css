@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c4c4c4;
+}
+
+#menu{
+    width: 21.875rem;
+    box-shadow: 0rem .3125rem .9375rem #00000035;
+    border-radius: .625rem;
+    background-color: white;
+    position: relative;
+}
+
+#menu ul{
+    display: flex;
+}
+
+#menu ul li{
+    width: 4.735rem;
+    height: 4.735rem;
+    position: relative;
+}
+
+#menu ul li .icon{
+    font-size: 2.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: blueviolet;
+    transition-duration: .2s;
+}
+
+#menu .indicator{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    position: absolute;
+    top: -20px;
+    transition: .2s;
+    --pos: 0;
+    margin-left: calc(calc(var(--pos) * 70px) + 15px);
+}
+
+#menu ul li 
+
+/* #menu .indicator::after{
+    content: "";
+    width: 5px;
+    height:5px;
+    position: absolute;
+    background-color: red;
+    top: calc(50% - 5px);
+    right: 100%;
+    
+} */
+
+#menu ul li.active .icon{
+    opacity: 1;
+    top: 0;
+}
+
+#menu ul li.active span{
+    top: 75%;
+    transition-duration: .2s;
+}
+
+#menu ul li span{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: blueviolet;
+}
